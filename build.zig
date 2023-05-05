@@ -24,7 +24,8 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
 
-    // This declares intent for the executable to be installed into the
+    var csv_module = b.addModule("token", .{ .source_file = .{ .path = "./src/token/token.zig" } });
+    exe.addModule("token", csv_module); // This declares intent for the executable to be installed into the
     // standard location when the user invokes the "install" step (the default
     // step when running `zig build`).
     b.installArtifact(exe);
