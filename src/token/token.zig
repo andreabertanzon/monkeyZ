@@ -19,5 +19,5 @@ pub const Token = struct {
     const Self = @This();
 
     type: TokenType,
-    char: []u8,
+    char: []const u8,
 };
