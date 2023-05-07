@@ -5,8 +5,8 @@ const Token = token.Token;
 const TokenType = token.TokenType;
 
 test "trying token" {
-    std.testing.refAllDecls(@This());
-    _ = Token{ .type = TokenType.EOF, .char = "p" };
+    //std.testing.refAllDecls(@This());
+    //_ = Token{ .type = TokenType.EOF, .char = "p" };
 
     // std.debug.print("IN TEST: {s}", .{tk.char});
     std.debug.print("I successfully run the test!!!", .{});
