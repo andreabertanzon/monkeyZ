@@ -9,7 +9,9 @@ test "trying token" {
     //_ = Token{ .type = TokenType.EOF, .char = "p" };
 
     // std.debug.print("IN TEST: {s}", .{tk.char});
-    std.debug.print("I successfully run the test!!!", .{});
+    // std.debug.print("I successfully run the test!!!", .{});
+    const i: i32 = 21;
+    try std.testing.expect(i == 21);
 }
 
 pub const Lexer = struct {
