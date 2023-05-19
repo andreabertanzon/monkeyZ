@@ -24,7 +24,8 @@ pub const Lexer = struct {
     ch: ?u8,
 
     pub fn new(input: []const u8) Lexer {
-        return Lexer{ .input = input, .position = 0, .readPosition = 0, .ch = null };
+        var l = Lexer{ .input = input, .position = 0, .readPosition = 0, .ch = null };
+        l.readChar();
     }
 
     pub fn readChar(self: *Lexer) void {
